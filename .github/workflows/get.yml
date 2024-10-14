@@ -5,6 +5,7 @@ on:
     branches: [ "main" ]
   schedule:
     - cron: '*/15 * * * *'
+    
 jobs:
   runscript:
     name: GetIP

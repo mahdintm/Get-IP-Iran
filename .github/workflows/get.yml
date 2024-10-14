@@ -12,14 +12,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@main
+        uses: actions/checkout@v2
 
       - name: Call a Bash Script
         run: |
           bash get.sh > list.rsc
           git config --global user.email "nematimahdi88@gmail.com"
           git config --global user.name "Mahdi Nemati"
-          git config credential.helper store
           git add -A
           git diff-index --quiet HEAD || git commit -m "Automatic update"
+
+      - name: Push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: |
           git push -f

@@ -26,4 +26,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
+          git remote set-url origin https://$GITHUB_TOKEN@github.com/mahdintm/Get-IP-Iran.git
           git push -f

@@ -19,7 +19,6 @@ jobs:
           bash get.sh > list.rsc
           git config --global user.email "nematimahdi88@gmail.com"
           git config --global user.name "Mahdi Nemati"
-          git config credential.helper store
           git add -A
           git diff-index --quiet HEAD || git commit -m "Automatic update"
 

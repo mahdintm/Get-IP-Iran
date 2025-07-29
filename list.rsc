@@ -1,4 +1,4 @@
-#Last update: Tue Jul 29 07:54:40 UTC 2025
+#Last update: Tue Jul 29 08:23:41 UTC 2025
 /ip firewall address-list remove [/ip firewall address-list find list=Iran]
 /ip firewall address-list
 :do { add address=2.57.3.0/24 list=Iran} on-error={}
@@ -462,6 +462,7 @@
 :do { add address=89.39.208.0/24 list=Iran} on-error={}
 :do { add address=89.40.35.0/24 list=Iran} on-error={}
 :do { add address=89.40.38.0/23 list=Iran} on-error={}
+:do { add address=89.40.65.0/24 list=Iran} on-error={}
 :do { add address=89.40.78.0/23 list=Iran} on-error={}
 :do { add address=89.40.90.0/23 list=Iran} on-error={}
 :do { add address=89.40.106.0/23 list=Iran} on-error={}
@@ -1808,6 +1809,9 @@
 :do { add address=212.46.45.0/24 list=Iran} on-error={}
 :do { add address=212.80.0.0/19 list=Iran} on-error={}
 :do { add address=212.86.64.0/19 list=Iran} on-error={}
+:do { add address=212.108.97.0/24 list=Iran} on-error={}
+:do { add address=212.108.98.0/24 list=Iran} on-error={}
+:do { add address=212.108.102.0/24 list=Iran} on-error={}
 :do { add address=212.120.192.0/19 list=Iran} on-error={}
 :do { add address=213.108.240.0/22 list=Iran} on-error={}
 :do { add address=213.109.199.0/24 list=Iran} on-error={}
@@ -1853,7 +1857,7 @@
 :do { add address=217.198.190.0/24 list=Iran} on-error={}
 :do { add address=217.218.0.0/15 list=Iran} on-error={}
 :do { add address=10.0.0.0/8 list=Iran} on-error={}
-#Last update: Tue Jul 29 07:54:41 UTC 2025
+#Last update: Tue Jul 29 08:23:42 UTC 2025
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list=Iran]
 /ipv6 firewall address-list
 :do { add address=2001:678:b0::/46 list=Iran} on-error={}
@@ -2089,6 +2093,7 @@
 :do { add address=2a06:f100::/29 list=Iran} on-error={}
 :do { add address=2a07:380::/29 list=Iran} on-error={}
 :do { add address=2a07:900::/29 list=Iran} on-error={}
+:do { add address=2a07:cc0::/29 list=Iran} on-error={}
 :do { add address=2a07:1380::/29 list=Iran} on-error={}
 :do { add address=2a07:1d00::/29 list=Iran} on-error={}
 :do { add address=2a07:2200::/29 list=Iran} on-error={}

@@ -1,0 +1,15 @@
+{
+  "project": "GlobalIP-Device-Lists",
+  "author": "Mahdi",
+  "country": "IR",
+  "updated_at": "2026-02-05T19:11:38Z",
+  "resources": {
+    "ipv4": [
+      "5.52.0.0/16",
+      "37.32.0.0/12"
+    ],
+    "ipv6": [
+      "2a00:9e00::/29"
+    ]
+  }
+}

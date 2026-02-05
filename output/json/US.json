@@ -1,0 +1,14 @@
+{
+  "project": "GlobalIP-Device-Lists",
+  "author": "Mahdi",
+  "country": "US",
+  "updated_at": "2026-02-05T19:11:39Z",
+  "resources": {
+    "ipv4": [
+      "8.8.8.0/24"
+    ],
+    "ipv6": [
+      "2001:4860::/32"
+    ]
+  }
+}

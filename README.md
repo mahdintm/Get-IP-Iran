@@ -1,17 +1,61 @@
-## Get IP Iran
+## GlobalIP-Device-Lists by Mahdi
 
-This script is for get iran ip subnet and added to address list mikrotik
+بله، از RIPE میشه برای همه کشورها گرفت: به ازای هر کد کشور ISO-2 یک درخواست زده میشه.
 
-## How to use script
+این ریپو خروجی IP Prefix (IPv4/IPv6) رو برای همه کشورها جداگانه می‌سازه و پوشه‌بندی تمیز داره.
+
+### ساختار پوشه‌ها
+
+- `output/json/CC.json`
+- `output/mikrotik/CC.rsc`
+- `output/linux/CC.txt`
+- `output/cisco/CC.cfg`
+- `output/fortigate/CC.conf`
+- `data/cache/CC.json` (برای آپدیت سریع/آفلاین)
+
+### دستگاه‌ها
+
+- `mikrotik`
+- `linux`
+- `cisco`
+- `fortigate`
+- `json`
+- `all` (همه خروجی‌ها)
+
+### دستورات
 
 ```bash
-foreach i in={"Iran"} do={
-  /tool fetch url="https://raw.githubusercontent.com/mahdintm/Get-IP-Iran/main/list.rsc" dst-path=Iran
-  /import file-name=$i
-  /file remove $i
-}
+# یک کشور، یک خروجی
+./get.sh IR mikrotik
+
+# یک کشور، همه خروجی‌ها
+./get.sh IR all
+
+# همه کشورها، فقط json
+./get.sh ALL json --save-cache
+
+# همه کشورها، همه خروجی‌ها
+./get.sh ALL all --save-cache
+
+# فقط از کش لوکال بخوان
+./get.sh ALL all --from-cache
 ```
 
-## Author
+### اجرای پایپ‌لاین همین الان
 
-[Mahdi](https://github.com/mahdintm)
+```bash
+./scripts/run_pipeline_now.sh
+```
+
+### آپدیت اتوماتیک
+
+- اسکریپت آپدیت کامل: `scripts/update_all.sh`
+- گیت‌هاب اکشن زمان‌بندی‌شده: `.github/workflows/get.yml` (هر ۶ ساعت + اجرای دستی)
+
+### اسم پیشنهادی برای سرچ گوگل
+
+**GlobalIP-Device-Lists**
+
+### Author
+
+Mahdi

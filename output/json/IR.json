@@ -2,7 +2,7 @@
   "project": "GlobalIP-Device-Lists",
   "author": "Mahdi",
   "country": "IR",
-  "updated_at": "2026-02-05T19:18:11Z",
+  "updated_at": "2026-02-05T19:22:26Z",
   "resources": {
     "ipv4": [
       "5.52.0.0/16",

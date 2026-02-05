@@ -2,7 +2,7 @@
   "project": "GlobalIP-Device-Lists",
   "author": "Mahdi",
   "country": "US",
-  "updated_at": "2026-02-05T19:18:11Z",
+  "updated_at": "2026-02-05T19:22:26Z",
   "resources": {
     "ipv4": [
       "8.8.8.0/24"

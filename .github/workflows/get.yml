@@ -5,6 +5,9 @@ on:
   schedule:
     - cron: '0 */6 * * *'
 
+permissions:
+  contents: write
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -15,7 +18,7 @@ jobs:
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
-      - name: Generate all outputs
+      - name: Generate all outputs (live + cache fallback)
         run: ./scripts/update_all.sh
 
       - name: Commit

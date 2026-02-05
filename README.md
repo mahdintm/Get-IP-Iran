@@ -1,61 +1,92 @@
-## GlobalIP-Device-Lists by Mahdi
+# GlobalIP-Device-Lists by Mahdi
 
-بله، از RIPE میشه برای همه کشورها گرفت: به ازای هر کد کشور ISO-2 یک درخواست زده میشه.
+A public project to generate clean country IP prefix lists (IPv4/IPv6) for everyone.
 
-این ریپو خروجی IP Prefix (IPv4/IPv6) رو برای همه کشورها جداگانه می‌سازه و پوشه‌بندی تمیز داره.
+---
 
-### ساختار پوشه‌ها
+## 🇬🇧 English
 
+### What this repo does
+- Fetches country prefixes from RIPE (`country-resource-list`) per ISO-2 country.
+- Generates separated outputs per country and per platform.
+- Supports live fetch + cache fallback for better reliability.
+
+### Output structure
 - `output/json/CC.json`
 - `output/mikrotik/CC.rsc`
 - `output/linux/CC.txt`
 - `output/cisco/CC.cfg`
 - `output/fortigate/CC.conf`
-- `data/cache/CC.json` (برای آپدیت سریع/آفلاین)
+- `data/cache/CC.json`
 
-### دستگاه‌ها
-
+### Devices
 - `mikrotik`
 - `linux`
 - `cisco`
 - `fortigate`
 - `json`
-- `all` (همه خروجی‌ها)
+- `all`
 
-### دستورات
-
+### Commands
 ```bash
-# یک کشور، یک خروجی
-./get.sh IR mikrotik
+chmod +x get.sh scripts/update_all.sh scripts/run_pipeline_now.sh
 
-# یک کشور، همه خروجی‌ها
+# single country
 ./get.sh IR all
 
-# همه کشورها، فقط json
-./get.sh ALL json --save-cache
-
-# همه کشورها، همه خروجی‌ها
+# all countries
 ./get.sh ALL all --save-cache
 
-# فقط از کش لوکال بخوان
+# cache-only mode
 ./get.sh ALL all --from-cache
-```
 
-### اجرای پایپ‌لاین همین الان
-
-```bash
+# run local pipeline now (quick demo with cache)
 ./scripts/run_pipeline_now.sh
 ```
 
-### آپدیت اتوماتیک
+### Run pipeline now (GitHub)
+1. Go to **Actions → Update Country IP Lists → Run workflow**
+2. Or with GitHub CLI:
+```bash
+gh workflow run get.yml
+```
 
-- اسکریپت آپدیت کامل: `scripts/update_all.sh`
-- گیت‌هاب اکشن زمان‌بندی‌شده: `.github/workflows/get.yml` (هر ۶ ساعت + اجرای دستی)
+---
 
-### اسم پیشنهادی برای سرچ گوگل
+## 🇮🇷 فارسی
 
+### این ریپو چه کاری انجام می‌دهد؟
+- برای هر کشور (ISO-2) از RIPE لیست Prefix می‌گیرد.
+- خروجی‌ها را تمیز و جداگانه به ازای هر کشور/دستگاه می‌سازد.
+- حالت آنلاین + fallback به کش دارد تا همیشه قابل استفاده باشد.
+
+### ساختار خروجی
+- `output/json/CC.json`
+- `output/mikrotik/CC.rsc`
+- `output/linux/CC.txt`
+- `output/cisco/CC.cfg`
+- `output/fortigate/CC.conf`
+- `data/cache/CC.json`
+
+### دستورها
+```bash
+./get.sh IR all
+./get.sh ALL all --save-cache
+./get.sh ALL all --from-cache
+./scripts/run_pipeline_now.sh
+```
+
+### اجرای پایپ‌لاین همین الان
+- از مسیر **Actions → Update Country IP Lists → Run workflow** اجرا کن.
+- یا با GitHub CLI:
+```bash
+gh workflow run get.yml
+```
+
+---
+
+## Suggested searchable name
 **GlobalIP-Device-Lists**
 
-### Author
-
+## Author
 Mahdi

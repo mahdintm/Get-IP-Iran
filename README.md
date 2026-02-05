@@ -1,17 +1,92 @@
-## Get IP Iran
+# GlobalIP-Device-Lists by Mahdi
 
-This script is for get iran ip subnet and added to address list mikrotik
+A public project to generate clean country IP prefix lists (IPv4/IPv6) for everyone.
 
-## How to use script
+---
 
+## 🇬🇧 English
+
+### What this repo does
+- Fetches country prefixes from RIPE (`country-resource-list`) per ISO-2 country.
+- Generates separated outputs per country and per platform.
+- Supports live fetch + cache fallback for better reliability.
+
+### Output structure
+- `output/json/CC.json`
+- `output/mikrotik/CC.rsc`
+- `output/linux/CC.txt`
+- `output/cisco/CC.cfg`
+- `output/fortigate/CC.conf`
+- `data/cache/CC.json`
+
+### Devices
+- `mikrotik`
+- `linux`
+- `cisco`
+- `fortigate`
+- `json`
+- `all`
+
+### Commands
 ```bash
-foreach i in={"Iran"} do={
-  /tool fetch url="https://raw.githubusercontent.com/mahdintm/Get-IP-Iran/main/list.rsc" dst-path=Iran
-  /import file-name=$i
-  /file remove $i
-}
+chmod +x get.sh scripts/update_all.sh scripts/run_pipeline_now.sh
+
+# single country
+./get.sh IR all
+
+# all countries
+./get.sh ALL all --save-cache
+
+# cache-only mode
+./get.sh ALL all --from-cache
+
+# run local pipeline now (quick demo with cache)
+./scripts/run_pipeline_now.sh
 ```
 
-## Author
+### Run pipeline now (GitHub)
+1. Go to **Actions → Update Country IP Lists → Run workflow**
+2. Or with GitHub CLI:
+```bash
+gh workflow run get.yml
+```
 
-[Mahdi](https://github.com/mahdintm)
+---
+
+## 🇮🇷 فارسی
+
+### این ریپو چه کاری انجام می‌دهد؟
+- برای هر کشور (ISO-2) از RIPE لیست Prefix می‌گیرد.
+- خروجی‌ها را تمیز و جداگانه به ازای هر کشور/دستگاه می‌سازد.
+- حالت آنلاین + fallback به کش دارد تا همیشه قابل استفاده باشد.
+
+### ساختار خروجی
+- `output/json/CC.json`
+- `output/mikrotik/CC.rsc`
+- `output/linux/CC.txt`
+- `output/cisco/CC.cfg`
+- `output/fortigate/CC.conf`
+- `data/cache/CC.json`
+
+### دستورها
+```bash
+./get.sh IR all
+./get.sh ALL all --save-cache
+./get.sh ALL all --from-cache
+./scripts/run_pipeline_now.sh
+```
+
+### اجرای پایپ‌لاین همین الان
+- از مسیر **Actions → Update Country IP Lists → Run workflow** اجرا کن.
+- یا با GitHub CLI:
+```bash
+gh workflow run get.yml
+```
+
+---
+
+## Suggested searchable name
+**GlobalIP-Device-Lists**
+
+## Author
+Mahdi

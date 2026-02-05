@@ -1,0 +1,4 @@
+# GlobalIP-Device-Lists by Mahdi
+# Country: US
+8.8.8.0/24
+2001:4860::/32

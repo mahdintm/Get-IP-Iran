@@ -1,0 +1,5 @@
+# GlobalIP-Device-Lists by Mahdi
+# Country: IR
+5.52.0.0/16
+37.32.0.0/12
+2a00:9e00::/29

@@ -1,4 +1,4 @@
-#Last update: Thu Feb 19 16:05:08 UTC 2026
+#Last update: Thu Feb 19 17:13:29 UTC 2026
 /ip firewall address-list remove [/ip firewall address-list find list=Iran]
 /ip firewall address-list
 :do { add address=2.57.3.0/24 list=Iran} on-error={}
@@ -1788,6 +1788,7 @@
 :do { add address=194.180.208.0/23 list=Iran} on-error={}
 :do { add address=194.180.224.0/23 list=Iran} on-error={}
 :do { add address=194.180.238.0/24 list=Iran} on-error={}
+:do { add address=194.213.118.0/24 list=Iran} on-error={}
 :do { add address=194.225.0.0/16 list=Iran} on-error={}
 :do { add address=194.242.22.0/24 list=Iran} on-error={}
 :do { add address=194.246.34.0/24 list=Iran} on-error={}
@@ -1919,7 +1920,7 @@
 :do { add address=217.198.190.0/24 list=Iran} on-error={}
 :do { add address=217.218.0.0/15 list=Iran} on-error={}
 :do { add address=10.0.0.0/8 list=Iran} on-error={}
-#Last update: Thu Feb 19 16:05:09 UTC 2026
+#Last update: Thu Feb 19 17:13:29 UTC 2026
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list=Iran]
 /ipv6 firewall address-list
 :do { add address=2001:678:b0::/46 list=Iran} on-error={}
@@ -2350,6 +2351,7 @@
 :do { add address=2a10:ed40::/29 list=Iran} on-error={}
 :do { add address=2a10:ef00::/29 list=Iran} on-error={}
 :do { add address=2a10:fe00::/32 list=Iran} on-error={}
+:do { add address=2a11:19c0::/32 list=Iran} on-error={}
 :do { add address=2a11:6e80::/29 list=Iran} on-error={}
 :do { add address=2a11:7700::/29 list=Iran} on-error={}
 :do { add address=2a11:7bc0::/29 list=Iran} on-error={}
